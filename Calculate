@@ -1,0 +1,31 @@
+print("+ сложение x и y"
+"\n- вычитание y из x"
+"\n* умножение x на y"
+"\n/ деление x на y"
+"\n| смена знака x"
+"\n0 выход из калькулятора")
+while True:
+    k = input("Какая операция?"
+    "\n")
+    if k == '0':
+        break
+    if k in ('+', '-', '*', '/'):
+        x = float(input("x="))
+        y = float(input("y="))
+        if k == '+':
+            print("%.2f" % (x+y))
+        elif k == '-':
+            print("%.2f" % (x-y))
+        elif k == '*':
+            print("%.2f" % (x*y))
+        elif k == '/':
+            if y != 0:
+                print("%.2f" % (x/y))
+            else:
+                print("Деление на ноль!")
+    if k == "|":
+        x = float(input("x="))
+        x = -x
+        print("%.2f" % (x))
+    else:
+        print("Ошибка")
